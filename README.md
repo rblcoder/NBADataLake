@@ -1,3 +1,37 @@
+# My Learnings
+
+1. Added further columns
+
+2. Used Lambda function for ingestion and scheduled it using EventBridge
+
+Lambda Code is in lambda_function.py
+
+For the lambda function, added environment variables NBA_API_KEY, NBA_ENDPOINT and gave access to writing to the s3 bucket 
+
+# Screenshots
+
+Query average experience by position
+
+![Alt Query average experience by position](NBADataLakesqueryavgexperiencebyposition.png?raw=true "Query average experience by position")
+
+Query average salary by position
+
+![Alt Query average salary by position](NBADataLakesquerysalarybyposition.png?raw=true "Query average salary by position")
+
+S3 bucket which stores data from the NBA API
+
+![Alt S3 bucket which stores data from the NBA API ](NBADataLakes3bucket.png?raw=true "S3 bucket which stores data from the NBA API")
+
+Lambda to ingest data from the NBA API
+
+![Alt Lambda to ingest data from the NBA API ](NBADataLakeslambda.png?raw=true "Lambda to ingest data from the NBA API")
+
+EventBridge to schedule Lambda function
+
+![Alt EventBridge to schedule Lambda function ](NBADataLakedataingestionEventBridge.png?raw=true "EventBridge to schedule Lambda function")
+
+
+
 # NBADataLake
 This repository contains the setup_nba_data_lake.py script, which automates the creation of a data lake for NBA analytics using AWS services. The script integrates Amazon S3, AWS Glue, and Amazon Athena, and sets up the infrastructure needed to store and query NBA-related data.
 
@@ -108,10 +142,10 @@ WHERE Position = 'PG';
 1. Securing AWS services with least privilege IAM policies.
 2. Automating the creation of services with a script.
 3. Integrating external APIs into cloud-based workflows.
+4. Used Lambda function for ingestion
 
+Lambda Code is in lambda_function.py
 
-### **Future Enhancements**
-1. Automate data ingestion with AWS Lambda
-2. Implement a data transformation layer with AWS Glue ETL
-3. Add advanced analytics and visualizations (AWS QuickSight)
+For the lambda function, added environment variables NBA_API_KEY, NBA_ENDPOINT and gave access to writing to the s3 bucket 
+
 
